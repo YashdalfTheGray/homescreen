@@ -1,0 +1,24 @@
+{
+  "name": "homescreen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yashdalfthegray/homescreen.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/yashdalfthegray/homescreen/issues"
+  },
+  "homepage": "https://github.com/yashdalfthegray/homescreen#readme",
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "live-server": "0.8.2"
+  }
+}

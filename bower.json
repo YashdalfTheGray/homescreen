@@ -1,0 +1,20 @@
+{
+  "name": "homescreen",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "YashdalfTheGray <yash.kulshrestha@gmail.com>"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/yashdalfthegray/homescreen",
+  "moduleType": [],
+  "dependencies": {
+    "angular-material": "~0.11.4",
+    "angular-mocks": "~1.4.8",
+    "lodash": "~3.10.1",
+    "moment": "~2.10.6",
+    "angular": "~1.4.8",
+    "angular-animate": "~1.4.8",
+    "angular-aria": "~1.4.8"
+  }
+}
