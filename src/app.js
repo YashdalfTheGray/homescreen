@@ -1,6 +1,6 @@
 /* global angular */
 
-angular.module('homescreen', [
+angular.module('homescreenDemo', [
     'ngAnimate',
     'ngMaterial'
 ])
