@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/yashdalfthegray/homescreen#readme",
   "devDependencies": {
-    "gulp": "3.9.0",
+    "chalk": "^1.1.1",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7",
     "live-server": "0.8.2"
   }
 }
