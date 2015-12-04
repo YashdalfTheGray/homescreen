@@ -1,8 +1,9 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     os = require('os'),
-    chalk = require('chalk')
-    exec = require('child_process').exec;
+    chalk = require('chalk'),
+    exec = require('child_process').exec,
+    del = require('del');
 
 var watchList = ['src/**/*.js', 'src/**/*.html', 'src/**/*.css', '!src/lib/**/*.*'];
 
@@ -17,8 +18,8 @@ gulp.task('usage', function() {
         chalk.green('usage'),
         '\tdisplay this help page.',
         '',
-        chalk.green('start'),
-        '\tstarts the homescreen demo.',
+        chalk.green('clear'),
+        '\tcleans the node_modules and the src/lib folder.',
         '',
         chalk.green('test'),
         '\truns the homescreen directive unit tests.',
@@ -27,12 +28,8 @@ gulp.task('usage', function() {
     gutil.log(usageLines.join(os.EOL));
 });
 
-gulp.task('start', function(cb) {
-    exec('live-server src/', function (err, stdout, stderr) {
-        gutil.log(stdout);
-        gutil.log(stderr);
-        cb(err);
-    });
+gulp.task('clean', function() {
+    del(['node_modules', 'src/lib']);
 });
 
 gulp.task('test', function() {
