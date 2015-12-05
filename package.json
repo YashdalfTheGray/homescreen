@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "gulp test",
     "postinstall": "bower install",
-    "start": "live-server src/"
+    "start": "gulp srtart"
   },
   "repository": {
     "type": "git",
