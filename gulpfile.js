@@ -18,7 +18,7 @@ gulp.task('usage', function() {
         chalk.green('usage'),
         '\tdisplay this help page.',
         '',
-        chalk.green('clear'),
+        chalk.green('clean'),
         '\tcleans the node_modules and the src/lib folder.',
         '',
         chalk.green('test'),
@@ -30,6 +30,18 @@ gulp.task('usage', function() {
 
 gulp.task('clean', function() {
     del(['node_modules', 'src/lib']);
+});
+
+gulp.task('start', function() {
+    var lsProc = exec('live-server src/');
+
+    lsProc.stdout.on('data', function(data) {
+        gutil.log(data);
+    });
+
+    lsProc.stderr.on('data', function(data) {
+        gutil.log(chalk.red(data));
+    });
 });
 
 gulp.task('test', function() {
