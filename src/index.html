@@ -11,6 +11,7 @@
     <script src="lib/angular-mocks/angular-mocks.js"></script>
     <script src="lib/lodash/lodash.min.js"></script>
     <script src="lib/moment/min/moment.min.js"></script>
+    <script src="homescreen/homescreen.js"></script>
     <script src="app.js"></script>
 
     <link rel="stylesheet" type="text/css" href="lib/angular-material/angular-material.min.css">
@@ -19,6 +20,9 @@
 <body>
     <md-content layout-padding layout-wrap ng-app="homescreenDemo">
         <h1 flex>Homescreen Demo</h1>
+        <md-content flex ng-controller="DemoAppCtrl as ctrl">
+            <homescreen config="ctrl.config"></homescreen>
+        </md-content>
     </md-content>
 </body>
 </html>
