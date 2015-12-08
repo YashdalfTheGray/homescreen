@@ -29,8 +29,9 @@ angular.module('homescreenDemo',
             var vm = this;
 
             vm.config = {
-                background: '#673AB7',
-                height: '300'
+                background: '#D1C4E9',
+                height: '300',
+                width: '300'
             }
         }
     ]
