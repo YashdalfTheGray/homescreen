@@ -30,8 +30,8 @@ angular.module('homescreenDemo',
 
             vm.config = {
                 background: '#D1C4E9',
-                height: '300',
-                width: '300'
+                height: 300,
+                width: 300
             }
         }
     ]
