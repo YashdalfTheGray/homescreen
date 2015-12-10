@@ -28,8 +28,8 @@ angular.module('homescreenDemo',
 
             var vm = this;
 
-            function onCustomButtonClick(title) {
-                console.log(title);
+            function onCustomButtonClick(datum, index) {
+                console.log(datum, index);
             }
 
             vm.config = {

@@ -38,17 +38,15 @@ angular.module('homescreen',
                         .attr('height', height)
                         .style('fill', scope.config.background);
 
-                        $timeout(function() {
-                            angular.forEach(scope.config.buttons, function(button, key){
-                                base.append('circle')
-                                .style('fill', '#2196F3')
-                                .attr('r', 20)
-                                .attr('cx', 50)
-                                .attr('cy', 50)
-                                .text(button.title)
-                                .on('click', button.onClick);
-                            });
-                        }, 1000);
+                        angular.forEach(scope.config.buttons, function(button, key){
+                            base.append('circle')
+                            .style('fill', '#2196F3')
+                            .attr('r', 20)
+                            .attr('cx', 50)
+                            .attr('cy', 50)
+                            .text(button.title)
+                            .on('click', button.onClick);
+                        });
 
                         console.log(base);
                     }
