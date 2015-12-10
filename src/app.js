@@ -28,10 +28,18 @@ angular.module('homescreenDemo',
 
             var vm = this;
 
+            function onCustomButtonClick(title) {
+                console.log(title);
+            }
+
             vm.config = {
                 background: '#D1C4E9',
-                height: 300,
-                width: 300
+                height: 640,
+                width: 480,
+                buttons: [
+                    { title: 'Test', onClick: onCustomButtonClick },
+                    { title: 'Test 2', onClick: onCustomButtonClick }
+                ]
             }
         }
     ]
