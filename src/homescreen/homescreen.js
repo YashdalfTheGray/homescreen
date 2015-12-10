@@ -6,8 +6,8 @@ angular.module('homescreen',
     ]
 ).directive('homescreen',
     [
-        '$window',
-        function($window) {
+        '$window', '$timeout',
+        function($window, $timeout) {
             "use strict";
 
             return {
@@ -28,15 +28,27 @@ angular.module('homescreen',
                         console.log(element);
 
                         var baseSvg = d3.select(element[0])
-                            .append('svg')
-                            .attr('width', width)
-                            .attr('height', height)
+                        .append('svg')
+                        .attr('width', width)
+                        .attr('height', height);
 
                         var base = baseSvg
-                            .append('rect')
-                            .attr('width', width)
-                            .attr('height', height)
-                            .style('fill', scope.config.background);
+                        .append('rect')
+                        .attr('width', width)
+                        .attr('height', height)
+                        .style('fill', scope.config.background);
+
+                        $timeout(function() {
+                            angular.forEach(scope.config.buttons, function(button, key){
+                                base.append('circle')
+                                .style('fill', '#2196F3')
+                                .attr('r', 20)
+                                .attr('cx', 50)
+                                .attr('cy', 50)
+                                .text(button.title)
+                                .on('click', button.onClick);
+                            });
+                        }, 1000);
 
                         console.log(base);
                     }
