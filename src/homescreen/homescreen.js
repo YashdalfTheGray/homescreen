@@ -6,8 +6,8 @@ angular.module('homescreen',
     ]
 ).directive('homescreen',
     [
-        '$window', '$timeout',
-        function($window, $timeout) {
+        '$window',
+        function($window) {
             "use strict";
 
             return {
